@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 public interface UserDao {
-    @Insert("insert into user(username, password) values(#{username}, #{password})")
+    @Insert("insert into user(username, password,createTime,updateTime,createUserId,updateUserId,deleteFlag) values(#{username}, #{password},#{createTime},#{updateTime},#{createUserId},#{updateUserId},#{deleteFlag})")
     void addUser(User user);
 
     @Select("select * from user where username = #{username}")
