@@ -72,6 +72,28 @@
                 }
             });
             }
+   function update() {
+        var username = $('#nameInputByUpdate').val();
+        var password = $('#passwordInputByUpdate').val();
+        console.log('login password ' + password)
+            $.ajax({
+                type:"POST",
+                url:"/update",
+                dataType:"json",
+                data:{
+
+                    username:username,
+                    password:password,
+
+                },
+                success:function(data){
+                    alert(data)
+                },
+                error: function(jqXHR){
+                    alert("发生错误："+jqXHR.status);
+                }
+            });
+            }
     </script>
 
 
@@ -84,13 +106,23 @@
 username:<input id="nameInput">
 password:<input id="passwordInput">
 <button onclick="login()">注册</button>
+
 <br>
 username:<input id="nameInputForSelect">
-<button onclick="select()">查询</button>
+<button onclick="select()">查找</button>
 
 <br>
 username:<input id="nameInputForDelete">
 <button onclick="dede()">删除</button>
+
+
+<br>
+username:<input id="nameInputByUpdate">
+password:<input id="passwordInputByUpdate">
+<button onclick="update()">修改</button>
+
+
+
 
 
 </body>

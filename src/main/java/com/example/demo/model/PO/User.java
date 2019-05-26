@@ -1,11 +1,22 @@
 package com.example.demo.model.PO;
 
-public class User {
+import com.example.demo.model.PO.base.BaseEntity;
 
+public class User extends BaseEntity {
+    private int id;
     private String username;
     private String password;
 
-    @Override
+    public User() {
+    }
+
+}
+
+
+
+
+
+   /* @Override
     public String toString() {
         return "User{" +
                 "username='" + username + '\'' +
@@ -16,9 +27,9 @@ public class User {
     public User(String username, String password) {
         this.username = username;
         this.password = password;
-    }
+    }*/
 
-    public String getUsername() {
+   /* public String getUsername() {
         return username;
     }
 
@@ -32,5 +43,4 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-}
+    }*/

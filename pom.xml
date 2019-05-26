@@ -32,6 +32,11 @@
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>2.0.1</version>
 		</dependency>
+		<dependency>
+			<groupId>org.liquibase</groupId>
+			<artifactId>liquibase-core</artifactId>
+		</dependency>
+
 
 		<dependency>
 			<groupId>mysql</groupId>
@@ -43,6 +48,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
+            <scope>provided</scope>
+        </dependency>
 	</dependencies>
 
 	<build>
@@ -53,5 +64,7 @@
 			</plugin>
 		</plugins>
 	</build>
+
+
 
 </project>

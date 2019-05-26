@@ -17,7 +17,7 @@ public class LoginController {
 
         userDao.addUser(user);
         System.out.println("user = [" + user + "]");
-        return "ok";
+        return "{\"status\":\"ok\"}";
     }
 
     @GetMapping("/select")
@@ -30,16 +30,26 @@ public class LoginController {
             return userByUserName;
         }
     }
+
     @DeleteMapping("/delete")
-    public User deleteUser(String username) {
+    public String deleteUser(String username) {
         if (username == null) {
             return null;
 
         } else {
-            User userByUserName = userDao.deleteByUserName(username);
-            return null;
+            int number = userDao.deleteByUserName(username);//number 删除几条数据
+            return "{\"status\":\" " + number + " \"}";
         }
     }
 
+    @PostMapping("/update")
+    public String updateUser(User user) {
+
+        userDao.updateByUserName(user);
+        System.out.println("user = [" + user + "]");
+        return "{\"status\":\"ok\"}";
+
+    }
 }
+
 
