@@ -8,18 +8,18 @@
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
         function login() {
-        var username = $('#nameInput').val();
-        var password = $('#passwordInput').val();
-        console.log('login name is ' + username)
-        console.log('login password is ' + password)
+        var shopname = $('#nameInput').val();
+        var price = $('#priceInput').val();
+        console.log('login name is ' + shopname)
+        console.log('login price is ' + price)
 
             $.ajax({
                 type:"POST",
                 url:"/register",
                 dataType:"json",
                 data:{
-                    username:username,
-                    password:password,
+                    商品名字:shopname,
+                    商品价格:price,
                 },
                 success:function(data){
                     if(data.success){
@@ -103,8 +103,8 @@
 <script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap-table/1.12.1/bootstrap-table.min.js"></script>
 
-username:<input id="nameInput">
-password:<input id="passwordInput">
+商品名字:<input id="nameInput">
+商品价格:<input id="priceInput">
 <button onclick="login()">注册</button>
 
 <br>

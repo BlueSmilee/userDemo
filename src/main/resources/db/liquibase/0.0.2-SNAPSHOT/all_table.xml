@@ -16,14 +16,14 @@
     </changeSet>
     <changeSet id="T100-20190526-2" author="winter">
         <loadData tableName="user" file="db/liquibase/0.0.2-SNAPSHOT/elec_user.csv">
-            <column name="username" type="STRING"/>
-            <column name="password" type="STRING"/>
-            <column name="createTime" type="DATE"/>
-            <column name="updateTime" type="DATE"/>
-            <column name="createUserId" type="NUMERIC"/>
-            <column name="updateUserId" type="NUMERIC"/>
-            <column name="deleteFlag" type="NUMERIC"/>
-        </loadData>
+        <column name="username" type="STRING"/>
+        <column name="password" type="STRING"/>
+        <column name="createTime" type="DATE"/>
+        <column name="updateTime" type="DATE"/>
+        <column name="createUserId" type="NUMERIC"/>
+        <column name="updateUserId" type="NUMERIC"/>
+        <column name="deleteFlag" type="NUMERIC"/>
+    </loadData>
     </changeSet>
 
 </databaseChangeLog>
